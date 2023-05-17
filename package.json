@@ -17,5 +17,13 @@
   "devDependencies": {
     "@shin-chan/kypes": "^0.0.1",
     "bootstrap": "^5.2.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motohasystem/KintonePluginCommonUtils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/motohasystem/KintonePluginCommonUtils/issues"
+  },
+  "homepage": "https://github.com/motohasystem/KintonePluginCommonUtils#readme"
 }
