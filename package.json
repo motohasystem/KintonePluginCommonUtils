@@ -1,0 +1,21 @@
+{
+  "name": "kintoneplugin-commonutils",
+  "version": "0.0.1",
+  "description": "utilities for treating DOM models with kintone plugin development",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daisuke Motohashi",
+  "license": "MIT",
+  "dependencies": {
+    "@kintone/dts-gen": "^6.1.18",
+    "@kintone/rest-api-client": "^3.3.2",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@shin-chan/kypes": "^0.0.1",
+    "bootstrap": "^5.2.3"
+  }
+}
