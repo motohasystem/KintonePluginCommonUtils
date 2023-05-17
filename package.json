@@ -12,10 +12,10 @@
   "dependencies": {
     "@kintone/dts-gen": "^6.1.18",
     "@kintone/rest-api-client": "^3.3.2",
+    "@shin-chan/kypes": "^0.0.1",
     "typescript": "^4.9.4"
   },
   "devDependencies": {
-    "@shin-chan/kypes": "^0.0.1",
     "bootstrap": "^5.2.3"
   },
   "repository": {
