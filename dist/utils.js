@@ -78,6 +78,20 @@ class Utils {
         el.style.verticalAlign = 'middle';
         return el;
     }
+    static decorate_menu_button(button) {
+        const decorated = Utils.decorate_menu_icon(button);
+        decorated.style.color = 'dodgerblue';
+        if (decorated == null) {
+            throw new Error(`装飾対象アイコンがnullです。`);
+        }
+        if (decorated.textContent == null) {
+            return decorated;
+        }
+        if (decorated.textContent.length > 2) {
+            decorated.style.fontSize = '16px';
+        }
+        return decorated;
+    }
     static simpleDiv = (msg) => {
         return Utils.createElement('div', '', [], msg);
     };

@@ -160,6 +160,29 @@ export class Utils {
 
 
     /**
+     * kintoneのメニューアイコン風にボタンを整形する
+     * @param button ボタン要素
+     * @returns 
+     */
+    public static decorate_menu_button(button: HTMLButtonElement): HTMLButtonElement {
+        const decorated = Utils.decorate_menu_icon(button) as HTMLButtonElement
+        decorated.style.color = 'dodgerblue'
+        if (decorated == null) {
+            throw new Error(`装飾対象アイコンがnullです。`)
+        }
+
+        if (decorated.textContent == null) {
+            return decorated
+        }
+
+        if (decorated.textContent.length > 2) {    // 2文字までは28px、🐈など絵文字は2文字カウント
+            decorated.style.fontSize = '16px'
+        }
+
+        return decorated
+    }
+
+    /**
      * テキストだけを持ったDIV要素を構築して返す
      * @param msg innerText
      * @returns 

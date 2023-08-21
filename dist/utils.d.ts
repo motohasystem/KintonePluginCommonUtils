@@ -44,6 +44,7 @@ export declare class Utils {
         [key: string]: string;
     } | undefined) => HTMLElement;
     static decorate_menu_icon(el: HTMLElement): HTMLElement;
+    static decorate_menu_button(button: HTMLButtonElement): HTMLButtonElement;
     static simpleDiv: (msg: string) => HTMLDivElement;
     static is_overlapped: (list: any[]) => boolean;
     static overlapped: (list: any[]) => any[];
