@@ -1,9 +1,7 @@
 "use strict";
-/*!
- * Copyright 2023 Daisuke Motohashi
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Utils = void 0;
+require("@shin-chan/kypes");
 class Utils {
     static unique_properties(props, with_record_number = false) {
         const results = [];
@@ -120,5 +118,16 @@ class Utils {
         }
         return whole_errors;
     }
+    static getHeaderMenuSpace = () => {
+        const hms_index = kintone.app.getHeaderMenuSpaceElement();
+        if (hms_index != null) {
+            return hms_index;
+        }
+        const hms_detail = kintone.app.record.getHeaderMenuSpaceElement();
+        if (hms_detail != null) {
+            return hms_detail;
+        }
+        throw new Error('HeaderSpaceElementが取得できませんでした。');
+    };
 }
 exports.Utils = Utils;

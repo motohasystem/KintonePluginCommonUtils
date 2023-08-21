@@ -1,7 +1,7 @@
 /*!
  * Copyright 2023 Daisuke Motohashi
  */
-
+import "@shin-chan/kypes";  // kintone types
 
 export type KintoneRecordItem = {
     'code': string
@@ -223,4 +223,23 @@ export class Utils {
 
         return whole_errors
     }
+
+    // HeaderMenuSpaceElementを表示している画面にあわせて取得する。
+    static getHeaderMenuSpace = () => {
+        const hms_index = kintone.app.getHeaderMenuSpaceElement()   // 一覧画面
+
+        if (hms_index != null) {
+            return hms_index
+        }
+
+        const hms_detail = kintone.app.record.getHeaderMenuSpaceElement()   // 詳細画面
+
+        if (hms_detail != null) {
+            return hms_detail
+        }
+
+        throw new Error('HeaderSpaceElementが取得できませんでした。')
+    }
+
+
 }

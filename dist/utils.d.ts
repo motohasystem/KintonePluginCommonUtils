@@ -1,6 +1,4 @@
-/*!
- * Copyright 2023 Daisuke Motohashi
- */
+import "@shin-chan/kypes";
 export declare type KintoneRecordItem = {
     'code': string;
     'label': string;
@@ -51,4 +49,5 @@ export declare class Utils {
     static overlapped: (list: any[]) => any[];
     static get_application_url(appid: string): string;
     static retrieve_errors(error: any, max_msgs?: number): string[] | undefined;
+    static getHeaderMenuSpace: () => HTMLElement;
 }
